@@ -13,7 +13,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import PriceTag from "./PriceTag";
 import { NFTProps } from "./LatestUploadNFTV1";
 
-const LatestUploadNFTV2 = ({ nft }: { nft: NFTPRops }) => {
+const LatestUploadNFTV2 = ({ nft }: { nft: NFTProps }) => {
   return (
     <HStack role="group">
       <HStack position="relative">
