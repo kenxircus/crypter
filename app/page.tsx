@@ -1,54 +1,6 @@
 "use client";
-import {
-  Box,
-  Button,
-  HStack,
-  Heading,
-  Text,
-  VStack,
-  Image,
-  IconButton,
-  Progress,
-  Avatar,
-  Stack,
-  Icon,
-  Card,
-  Tag,
-  Badge,
-  Wrap,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Select,
-  Grid,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
-  Center,
-  Show,
-  Divider,
-  Hide,
-} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-import { TbPlayerPlayFilled } from "react-icons/tb";
-import { HiMiniSpeakerWave, HiOutlineTrophy } from "react-icons/hi2";
-import { MdFullscreen, MdOutlineAutoGraph } from "react-icons/md";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { IoChevronDown } from "react-icons/io5";
-import { useState } from "react";
-import Rank from "./components/Rank";
-import { GiSettingsKnobs } from "react-icons/gi";
-import FillButton from "./components/FillButton";
-import NFTBidCard from "./components/NFTBidCard";
-import PriceTag from "./components/PriceTag";
-import Collection from "./components/HotCollectionCard";
-import { IoMdPricetag } from "react-icons/io";
-import { CiFilter } from "react-icons/ci";
-import LatestUploadNFTV1 from "./components/LatestUploadNFTV1";
-import LatestUploadNFTV2 from "./components/LatestUploadNFTV2";
 import Hero from "./components/(home)/Hero";
 import LatestBid from "./components/(home)/LatestBid";
 import LatestUploads from "./components/(home)/LatestUploads";

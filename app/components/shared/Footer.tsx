@@ -22,7 +22,13 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <Box as="footer" pt={24} pb={14}>
-      <HStack justifyContent="space-between" p={6} mx="auto" w="7xl">
+      <Stack
+        direction={{ base: "column", lg: "row" }}
+        justifyContent="space-between"
+        p={6}
+        mx="auto"
+        w="7xl"
+      >
         <VStack align="start">
           <Image
             boxSize={30}
@@ -35,7 +41,7 @@ const Footer = (props: Props) => {
             The New Creative Economy.
           </Heading>
         </VStack>
-        <VStack align="start">
+        <VStack align="start" mt={{ base: 8, lg: 0 }}>
           <Heading fontSize="lg">Crypter.</Heading>
           <VStack align="start" mt={6}>
             <Link href="/">
@@ -46,7 +52,7 @@ const Footer = (props: Props) => {
             </Link>
           </VStack>
         </VStack>
-        <VStack align="start">
+        <VStack align="start" mt={{ base: 8, lg: 0 }}>
           <Heading fontSize="lg">Info</Heading>
           <VStack align="start" mt={6}>
             <Link href="/">
@@ -59,8 +65,8 @@ const Footer = (props: Props) => {
         </VStack>
         <VStack align="start">
           <Heading fontSize="lg">Join Newsletter</Heading>
-          <VStack align="start" mt={6}>
-            <Text color="gray.400">
+          <VStack align="start" w="auto" mt={6}>
+            <Text color="gray.400" maxW={{ base: "sm", lg: "auto" }}>
               Subscribe our newsletter to get more free design course and
               resource
             </Text>
@@ -76,11 +82,11 @@ const Footer = (props: Props) => {
                   icon={<IoIosArrowRoundForward fontSize={16} />}
                 />
               </InputRightElement>
-              <Input placeholder="Email" />
+              <Input placeholder="Email" w="auto" />
             </InputGroup>
           </VStack>
         </VStack>
-      </HStack>
+      </Stack>
     </Box>
   );
 };

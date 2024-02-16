@@ -22,6 +22,7 @@ import {
   Hide,
   InputGroup,
   InputRightElement,
+  Stack,
 } from "@chakra-ui/react";
 import {
   TbBell,
@@ -41,7 +42,13 @@ type Props = {};
 const Navbar = (props: Props) => {
   return (
     <HStack as="nav" borderBottom="1px solid" borderColor="gray.600">
-      <HStack justifyContent="space-between" p={6} mx="auto" w="7xl">
+      <Stack
+        direction={{ base: "column", lg: "row" }}
+        justifyContent="space-between"
+        p={6}
+        mx="auto"
+        w="7xl"
+      >
         <HStack>
           <Image
             boxSize={30}
@@ -284,7 +291,7 @@ const Navbar = (props: Props) => {
             </PopoverContent>
           </Popover>
         </HStack>
-      </HStack>
+      </Stack>
       {/* Logo */}
     </HStack>
   );

@@ -38,7 +38,7 @@ const LatestBid = (props: Props) => {
       {/* Slider Image */}
       <Box position="relative">
         <Image
-          w={{ base: "full", lg: 640 }}
+          w={{ base: "full", "2xl": 640 }}
           rounded="lg"
           alt="image"
           src="https://ui8-crypter-nft.herokuapp.com/images/content/video-preview.jpg"

@@ -26,12 +26,12 @@ const HotCollectionCard = ({ collection }: { collection: Collection }) => {
           rounded="lg"
           fit="cover"
           alt="Collection Image"
-          w={350}
-          maxW={350}
+          w={{ base: "full", "2xl": 350 }}
+          maxW={{ base: "full", "2xl": 350 }}
           h={240}
           src={collection?.images[0]}
         />
-        <HStack mt={2}>
+        <HStack mt={2} w="full">
           {collection?.images.slice(1, 4).map((image, idx) => (
             <Image
               key={idx}

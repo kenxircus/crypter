@@ -16,6 +16,8 @@ import {
   TabPanel,
   Grid,
   Stack,
+  Show,
+  Select,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import NFTBidCard from "../NFTBidCard";
@@ -37,14 +39,21 @@ const Discover = ({ bids }: { bids: Bids[] }) => {
     >
       <Heading>Discover</Heading>
       {/* Category Tabs */}
-      <Tabs variant="unstyled" size="sm">
-        <HStack mt={8} w="full" align="center" justify="space-between">
+      <Tabs variant="unstyled" size="sm" w="full">
+        <Stack
+          direction={{ base: "column", lg: "row" }}
+          mt={8}
+          w="full"
+          align="center"
+          justify="space-between"
+        >
           {/* Select Button */}
           <Menu>
             <MenuButton
               as={Button}
               variant="ghost"
               size="lg"
+              w={{ base: "full", lg: "auto" }}
               rounded="full"
               rightIcon={<IoChevronDown />}
               color="white"
@@ -60,128 +69,140 @@ const Discover = ({ bids }: { bids: Bids[] }) => {
               </MenuItem>
             </MenuList>
           </Menu>
-
-          <TabList gap={4}>
-            <Tab
-              py={2}
-              border="none"
-              rounded="full"
-              _active={{ bgColor: "inherit" }}
-              _hover={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              _selected={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              color="white"
-            >
-              All Items
-            </Tab>
-            <Tab
-              py={2}
-              border="none"
-              rounded="full"
-              _active={{ bgColor: "inherit" }}
-              _hover={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              _selected={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              color="white"
-            >
-              Art
-            </Tab>
-            <Tab
-              py={2}
-              border="none"
-              rounded="full"
-              _active={{ bgColor: "inherit" }}
-              _hover={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              _selected={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              color="white"
-            >
-              Game
-            </Tab>
-            <Tab
-              py={2}
-              border="none"
-              rounded="full"
-              _active={{ bgColor: "inherit" }}
-              _hover={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              _selected={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              color="white"
-            >
-              Photography
-            </Tab>
-            <Tab
-              py={2}
-              border="none"
-              rounded="full"
-              _active={{ bgColor: "inherit" }}
-              _hover={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              _selected={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              color="white"
-            >
-              Music
-            </Tab>
-            <Tab
-              py={2}
-              border="none"
-              rounded="full"
-              _active={{ bgColor: "inherit" }}
-              _hover={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              _selected={{
-                bgColor: "whiteAlpha.900",
-                color: "blackAlpha.900",
-              }}
-              color="white"
-            >
-              Video
-            </Tab>
-          </TabList>
+          <Show below="lg">
+            <Select>
+              <option selected>All Items</option>
+              <option>Art</option>
+              <option>Game</option>
+              <option>Photography</option>
+              <option>Music</option>
+              <option>Video</option>
+            </Select>
+          </Show>
+          <Show above="lg">
+            <TabList gap={4}>
+              <Tab
+                py={2}
+                border="none"
+                rounded="full"
+                _active={{ bgColor: "inherit" }}
+                _hover={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                _selected={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                color="white"
+              >
+                All Items
+              </Tab>
+              <Tab
+                py={2}
+                border="none"
+                rounded="full"
+                _active={{ bgColor: "inherit" }}
+                _hover={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                _selected={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                color="white"
+              >
+                Art
+              </Tab>
+              <Tab
+                py={2}
+                border="none"
+                rounded="full"
+                _active={{ bgColor: "inherit" }}
+                _hover={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                _selected={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                color="white"
+              >
+                Game
+              </Tab>
+              <Tab
+                py={2}
+                border="none"
+                rounded="full"
+                _active={{ bgColor: "inherit" }}
+                _hover={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                _selected={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                color="white"
+              >
+                Photography
+              </Tab>
+              <Tab
+                py={2}
+                border="none"
+                rounded="full"
+                _active={{ bgColor: "inherit" }}
+                _hover={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                _selected={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                color="white"
+              >
+                Music
+              </Tab>
+              <Tab
+                py={2}
+                border="none"
+                rounded="full"
+                _active={{ bgColor: "inherit" }}
+                _hover={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                _selected={{
+                  bgColor: "whiteAlpha.900",
+                  color: "blackAlpha.900",
+                }}
+                color="white"
+              >
+                Video
+              </Tab>
+            </TabList>
+          </Show>
           <Button
             size="lg"
             rounded="full"
+            w={{ base: "full", lg: "auto" }}
             bgColor="blue.600"
             _hover={{ bgColor: "blue.800" }}
             rightIcon={<CiFilter />}
           >
             Filter
           </Button>
-        </HStack>
+        </Stack>
 
         {/* Content */}
         <TabPanels>
           <TabPanel>
             <Grid
               templateColumns={{
-                base: "repeat(2, 1fr)",
+                base: "repeat(1, 1fr)",
                 md: "repeat(2, 1fr)",
                 lg: "repeat(3, 1fr)",
                 "2xl": "repeat(4, 1fr)",

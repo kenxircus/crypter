@@ -29,11 +29,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-          <DarkMode>
-            <Navbar />
-            {children}
-            <Footer />
-          </DarkMode>
+
+          <Navbar />
+          {children}
+          <Footer />
         </Providers>
       </body>
     </html>
