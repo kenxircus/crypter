@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Box, ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import Navbar from "./components/shared/Navbar";
+import { Providers } from "./providers";
+import theme from "./theme";
+import Footer from "./components/shared/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
